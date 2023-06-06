@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+//Task 4
+string findUniqueCharacters(const string& str) {
+    string uniqueStr;
+
+    for (char c : str) {
+        if (str.find(c) == str.rfind(c)) {
+            uniqueStr += c;
+        }
+    }
+
+    return uniqueStr;
+}
+
+int main() {
+    string str = "hello world";
+    string uniqueChars = findUniqueCharacters(str);
+
+    cout << "unique symbol: " << uniqueChars << endl;
+
+    
+}
