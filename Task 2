@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+// Task 2
+string capitalizeString(const string& input) {
+    string result = input;
+    for (char& c : result) {
+        if (c >= 'a' && c <= 'z') {
+            c = c - 'a' + 'A';
+        }
+    }
+    return result;
+
+}
+
+int main() {
+    string input = "hello world";
+    string result = capitalizeString(input);
+    cout << result << endl;
+}
